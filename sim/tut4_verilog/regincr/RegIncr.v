@@ -30,6 +30,13 @@ module tut4_verilog_regincr_RegIncr
   // This model is incomplete. As part of the tutorial you will insert
   // combinational logic here to model the incrementer logic.
   // '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+  
+  logic [7:0] temp_wire;
+  always @(*) begin
+    temp_wire = reg_out + 1;
+  end
+  
+  assign out = temp_wire;
 
 endmodule
 
